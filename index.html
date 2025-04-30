@@ -139,7 +139,7 @@
           </li>
 
           <li>
-            <a href="https://www.linkedin.com/in/praveen-hallur-9463ba1bb/" class="hero-social-link">
+            <a href="https://www.linkedin.com/in/%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%B5%E0%B3%80%E0%B2%A3-%E0%B2%B9%E0%B2%B3%E0%B3%8D%E0%B2%B3%E0%B3%82%E0%B2%B0-9463ba1bb/" class="hero-social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
 
               <div class="tooltip">Linkedin</div>
@@ -171,7 +171,7 @@
               </div>
 
               <h2 class="h2 card-title">
-                05+ <strong>Years of Experience</strong>
+                8+ <strong>Years of Experience</strong>
               </h2>
 
               <ion-icon name="chevron-forward-outline"></ion-icon>
@@ -187,7 +187,7 @@
               </div>
 
               <h2 class="h2 card-title">
-                25+ <strong>Completed Projects</strong>
+                40+ <strong>Completed Projects</strong>
               </h2>
 
               <ion-icon name="chevron-forward-outline"></ion-icon>
@@ -203,7 +203,7 @@
               </div>
 
               <h2 class="h2 card-title">
-                5+ <strong>Happy Clients</strong>
+                10+ <strong>Happy Clients</strong>
               </h2>
 
               <ion-icon name="chevron-forward-outline"></ion-icon>
@@ -245,10 +245,13 @@
           </p>
 
           <div class="btn-group">
-            <button class="btn btn-secondary">Hire me</button>
-
-            <button class="btn btn-primary">Download cv</button>
+            <a href="#contact" class="btn btn-secondary">Hire me</a>
+            <a href="https://drive.google.com/file/d/1aXrsck-aDBRkxGWu2NQj582LW9U1KMrf/view?usp=sharing" class="btn btn-primary" target="_blank">Download CV</a>
           </div>
+
+          
+
+          
 
         </div>
 
@@ -684,8 +687,9 @@
           </li>
 
           <li>
-            <button class="load-more">Load more work</button>
+            <a href="https://miniprojectbytes.blogspot.com/" class="load-more">Load more work</a>
           </li>
+          
 
         </ul>
 
@@ -780,7 +784,7 @@
                 </li>
 
                 <li>
-                  <a href="https://www.linkedin.com/in/praveen-hallur-9463ba1bb/" class="contact-social-link">
+                  <a href="https://www.linkedin.com/in/%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%B5%E0%B3%80%E0%B2%A3-%E0%B2%B9%E0%B2%B3%E0%B3%8D%E0%B2%B3%E0%B3%82%E0%B2%B0-9463ba1bb/" class="contact-social-link">
                     <div class="tooltip">Linkedin</div>
 
                     <ion-icon name="logo-linkedin"></ion-icon>
@@ -802,69 +806,65 @@
 
         </div>
 
-        <form action="" class="contact-form">
+        <form class="contact-form" onsubmit="return sendMail()">
 
           <div class="form-wrapper">
-
             <label for="name" class="form-label">Name</label>
-
             <div class="input-wrapper">
-
               <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
-
               <ion-icon name="person-circle"></ion-icon>
-
             </div>
-
           </div>
-
+        
           <div class="form-wrapper">
-
             <label for="email" class="form-label">Email</label>
-
             <div class="input-wrapper">
-
-              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
-                class="input-field">
-
+              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com" class="input-field">
               <ion-icon name="mail"></ion-icon>
-
             </div>
-
           </div>
-
+        
           <div class="form-wrapper">
-
             <label for="phone" class="form-label">Phone</label>
-
             <div class="input-wrapper">
-
               <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
-
               <ion-icon name="call"></ion-icon>
-
             </div>
-
           </div>
-
+        
           <div class="form-wrapper">
-
             <label for="message" class="form-label">Message</label>
-
             <div class="input-wrapper">
-
-              <textarea name="message" id="message" required placeholder="Write message..."
-                class="input-field"></textarea>
-
+              <textarea name="message" id="message" required placeholder="Write message..." class="input-field"></textarea>
               <ion-icon name="chatbubbles"></ion-icon>
-
             </div>
-
           </div>
-
+        
           <button type="submit" class="btn btn-primary">Send</button>
-
         </form>
+        
+        <script>
+          function sendMail() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+        
+            const subject = encodeURIComponent("New Contact Form Message from " + name);
+            const body = encodeURIComponent(
+              `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
+            );
+        
+            const mailtoLink = `mailto:praveenhallur2003@gmail.com?subject=${subject}&body=${body}`;
+        
+            window.location.href = mailtoLink;
+        
+            return false; // Prevent actual form submission
+          }
+        </script>
+        
+
+        
 
       </section>
 
